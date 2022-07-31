@@ -4,28 +4,21 @@ function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
 
-  var devolverPrimerElemento=[10, 20, 30, 40];
-
-  return devolverPrimerElemento[0];
+  return array[0];
 }
 
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  devolverUltimoElemento=[10, 20, 30, 40];
-
-  return devolverUltimoElemento[devolverUltimoElemento.length -1];
+  return array[array.length - 1];
 }
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-
-  obtenerLargoDelArray=[10, 20, 30, 40];
-
-  return obtenerLargoDelArray.length;
+  return array.length;
  
 }
 
@@ -36,7 +29,6 @@ function incrementarPorUno(array) {
   // y devuelve el array
   // Tu código:
 
-  var int ,array = [11, 22, 33, 44, 55, 66, 77, 88, 99];
   var nuevoArray = [];
   for(var i = 0; i < array.length; i++) {
     nuevoArray[i] = array[i] + 1;
@@ -46,13 +38,12 @@ function incrementarPorUno(array) {
 }
 
 
+
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  var array = ['partes', 'divisiones', 'caracteristicas'];
-  array.push('elemento');
-
+  array[array.length] = elemento;
   return array;
 }
 
@@ -62,8 +53,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
-  var array =['organizar','partes','caracteristicas'];
-  array.unshift('elemento');
+  array.unshift(elemento);
   return array;
 }
 
@@ -74,7 +64,6 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  var palabras=['Hola', 'buen', 'día', 'con', 'todos'];
   return palabras.join(' ');
 }
 
@@ -83,9 +72,8 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
-  var array = ['partes','caracteristicas','lados','elemento'];
   for(var i = 0; i < array.length; i++) {
-    if(array[i] === 'elemento') {
+    if(array[i] === elemento) {
       return true;
     }
   }
@@ -97,8 +85,7 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
-  var int, array = [3, 5, 8, 0, 20, 30];
-  var suma=0;
+  var suma = 0;
   for(var i = 0; i < numeros.length; i++) {
     suma = suma + numeros[i];
   }
@@ -110,11 +97,7 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  var resultadosTest = [10, 20, 30, 40, 50, 60];
-  var agregarNumeros=0;
-  for(var i=0; i<resultadosTest.length; i++){
-    agregarNumeros = agregarNumeros + resultadosTest[i];
-  }
+  
   return agregarNumeros(resultadosTest) / resultadosTest.length;
 }
 
@@ -123,7 +106,6 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-var numeros = [10, 100, 200, 148, 50, 30];
   var maximo = numeros[0];
   for(var i = 1; i < numeros.length; i++) {
     if(numeros[i] > maximo) { 
@@ -151,7 +133,6 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
   
-  var arreglo = [10, 23, 5, 8, 99, 56, 14, 19, 17, 25, 19, 21]; 
   let contador = 0;
   for (let i = 0; i < arreglo.length ; i++) {
     if(arreglo[i] > 19){
@@ -171,7 +152,7 @@ function diaDeLaSemana(numeroDeDia) {
   if(numeroDeDia === 1 || numeroDeDia === 7 ){
     return "Es fin de semana"
   }
-  return "Es dia Laboral";
+  return "Es dia Laboral"
 } 
 
 
